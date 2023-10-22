@@ -5,4 +5,4 @@
   - Edit the skripts if you want. To send me the new skript, Please hit it with the issues!
   - Also, It's from the creator of this repository, NemusCraft! Hope you have nice day
 # Socials
-<link=https://discord.gg/kNeEbE3KgA><img src="https://github.com/NemusCraft/Skripts/assets/95968788/5e5d5065-3b1c-468b-a982-47a7401ccc4f" width=15% height=15%>
+<img src="https://github.com/NemusCraft/Skripts/assets/95968788/5e5d5065-3b1c-468b-a982-47a7401ccc4f" width=15% height=15%>
