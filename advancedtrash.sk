@@ -10,6 +10,5 @@ on inventory click:
 			if name of event-slot is "&c&lClear Everything!":
 				cancel event
 				clear player's inventory
-				stop
 			if name of event-slot is "&0 ":
 				cancel event
