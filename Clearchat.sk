@@ -1,5 +1,6 @@
 command /clearchat:
 	permission: nemus.skript.test
+	permission message: hey, you are not allowed to use this.
 	trigger:
 		loop 250 times:
 			send "" to all players
