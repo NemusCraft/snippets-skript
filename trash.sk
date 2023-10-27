@@ -1,4 +1,4 @@
 command /trash:
 	trigger:
-		set (metadata value "trash" of player) to chest inventory with 1 rows named "&5Trash!"
-		open (metadata value "trash" of player) to player
+		set {_trash} to chest inventory with 1 rows named "&5Trash!"
+		open {_trash} to player
