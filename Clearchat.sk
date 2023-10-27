@@ -1,5 +1,5 @@
 command /clearchat:
 	trigger:
 		loop 250 times:
-			send ""
-		send "%player's display name% &dhas cleared the chat!"
+			send "" to all players
+		send "%player's display name% &dhas cleared the chat!" to all players
