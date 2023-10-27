@@ -1,4 +1,5 @@
 command /clearchat:
+	permission: nemus.skript.test
 	trigger:
 		loop 250 times:
 			send "" to all players
