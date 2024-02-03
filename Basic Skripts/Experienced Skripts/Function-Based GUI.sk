@@ -1,6 +1,0 @@
-command /gui:
-  trigger:
-    GUI(player)
-function GUI(p: player):
-  set {_gui} to new chest inventory named "GUI in functions!1!11!1!1"
-  open {_gui} to {_p}
