@@ -1,0 +1,48 @@
+command /sethome <text>:
+    permission: home
+    usage: &c/sethome <home name>
+    trigger:
+        if {home::%player's uuid%::%arg-1%} is not set:
+            if arg-1 doesn't contain " ":
+                set {home::%player's uuid%::%arg-1%} to player's location
+                add arg-1 to {homelist::%player's uuid%::*}
+                send "&aYour new home is now set: %arg-1%!"
+            else:
+                send "&cYou cannot use spaces as home name!"
+        else:
+            send "&cThe home you despired is already set! Try /home %arg-1%."
+ 
+command /delhome <text>:
+    permission: home
+    usage: &c/delhome <home name>
+    trigger:
+        if {home::%player's uuid%::%arg-1%} is set:
+            delete {home::%player's uuid%::%arg-1%}
+            remove arg-1 from {homelist::%player's uuid%::*}
+            send "&aYour defined home (%arg-1%) is now removed"
+        else:
+            send "&cThe home you despired doesn't exist! Try /sethome %arg-1%."
+ 
+command /home <text>:
+    permission: home
+    usage: &c/home <home name>
+    trigger:
+        if {home::%player's uuid%::%arg-1%} is set:
+            teleport player to {home::%player's uuid%::%arg-1%}
+            send "&aSuccessfully warped you to %arg-1%!"
+        else:
+            send "&cThe home you despired doesn't exist! Try /sethome %arg-1%."
+ 
+command /listhomes:
+    trigger:
+        send "&6Your homes (%size of {homelist::%player's uuid%::*}%):"
+        send "&e%join {homelist::%player's uuid%::*} ? "&cNo homes are set!" with ", "%"
+ 
+command /resethomes:
+    permission: staff
+    trigger:
+        clear {homelist::*}
+        clear {home::*}
+        send "&aSuccessfully purged all homes!"
+on tab complete of "/home" or "/delhome":
+    set tab completions for position 1 to {homelist::%player's uuid%::*}
